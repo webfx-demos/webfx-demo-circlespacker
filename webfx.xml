@@ -6,7 +6,10 @@
     </modules>
 
     <required-libraries>
-            <webfx-library artifact="dev.webfx:webfx-lib-circlespacker:0.1.0-SNAPSHOT"/>
+        <group groupId="dev.webfx" version="0.1.0-SNAPSHOT">
+            <webfx-library artifactId="webfx-lib-circlespacker"/>
+            <webfx-library artifactId="webfx-extras-private"/>
+        </group>
     </required-libraries>
 
 </project>
