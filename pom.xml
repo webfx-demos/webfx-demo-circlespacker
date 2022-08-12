@@ -11,7 +11,7 @@
         <version>0.1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>webfx-demo-circlespacker</artifactId>
+    <artifactId>webfx-demo-ledpacking</artifactId>
 
     <repositories>
 
@@ -32,10 +32,10 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>webfx-demo-circlespacker-application</module>
-        <module>webfx-demo-circlespacker-application-gluon</module>
-        <module>webfx-demo-circlespacker-application-gwt</module>
-        <module>webfx-demo-circlespacker-application-openjfx</module>
+        <module>webfx-demo-ledpacking-application</module>
+        <module>webfx-demo-ledpacking-application-gluon</module>
+        <module>webfx-demo-ledpacking-application-gwt</module>
+        <module>webfx-demo-ledpacking-application-openjfx</module>
     </modules>
 
 </project>

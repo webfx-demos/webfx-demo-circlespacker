@@ -7,7 +7,7 @@
 
     <required-libraries>
         <group groupId="dev.webfx" version="0.1.0-SNAPSHOT">
-            <webfx-library artifactId="webfx-lib-circlespacker"/>
+            <webfx-library artifactId="webfx-lib-circlepacking"/>
             <webfx-library artifactId="webfx-extras-private"/>
         </group>
     </required-libraries>

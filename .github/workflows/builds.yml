@@ -32,7 +32,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        app: [{name: 'CirclesPacker', module-token: 'webfx-demo-circlespacker', gwt-token: 'webfx_demo_circlespacker', gluon-token: 'WebFXDemoCirclespacker', web-push-branch: 'circlespacker', ios-bundle-id: 'dev.webfx.demo.circlespacker', version: '0.1.0-SNAPSHOT'}]
+        app: [{name: 'LedPacking', module-token: 'webfx-demo-ledpacking', gwt-token: 'webfx_demo_ledpacking', gluon-token: 'WebFXDemoLedpacking', web-push-branch: 'ledpacking', ios-bundle-id: 'dev.webfx.demo.ledpacking', version: '0.1.0-SNAPSHOT'}]
         os-config: [1] #  [1, 2, 3, 4]
         include:
           - os-config: 1 # Generates builds 1) 2) 3) 4) & 5)
