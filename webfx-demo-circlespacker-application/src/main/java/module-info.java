@@ -7,7 +7,10 @@ module webfx.demo.circlespacker.application {
     requires javafx.controls;
     requires javafx.graphics;
     requires webfx.extras.led;
-    requires webfx.lib.circlespacker;
+    requires webfx.lib.circlepacking;
+
+    // Exported packages
+    exports dev.webfx.demo.circlespacker;
 
     // Provided services
     provides javafx.application.Application with dev.webfx.demo.circlespacker.CirclesPackerApplication;

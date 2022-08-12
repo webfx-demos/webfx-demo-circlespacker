@@ -1,7 +1,7 @@
 package dev.webfx.demo.circlespacker;
 
 import dev.webfx.extras.led.Led;
-import dev.webfx.lib.circlespacker.CirclesPackerPane;
+import dev.webfx.lib.circlepacking.CirclePackingPane;
 import javafx.application.Application;
 import javafx.geometry.Orientation;
 import javafx.scene.Node;
@@ -31,10 +31,10 @@ public class CirclesPackerApplication extends Application {
         primaryStage.show();
     }
 
-    CirclesPackerPane createCirclesPackerPane(int count, Color color) {
-        CirclesPackerPane circlesPackerPane = new CirclesPackerPane(createCircles(count, color));
-        circlesPackerPane.setBackground(new Background(new BackgroundFill(Color.BLACK, null, null)));
-        return circlesPackerPane;
+    CirclePackingPane createCirclesPackerPane(int count, Color color) {
+        CirclePackingPane circlePackingPane = new CirclePackingPane(createCircles(count, color));
+        circlePackingPane.setBackground(new Background(new BackgroundFill(Color.BLACK, null, null)));
+        return circlePackingPane;
     }
 
     private static Node[] createCircles(int count, Color color) {

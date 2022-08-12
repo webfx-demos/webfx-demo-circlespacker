@@ -106,7 +106,7 @@
     <!--=================================< webfx-kit-util >=================================-->
     <source path="dev/webfx/kit/util/properties"/>
     <source path="dev/webfx/kit/util/properties/conversion"/>
-    <!--============================< webfx-lib-circlespacker >=============================-->
+    <!--============================< webfx-lib-circlepacking >=============================-->
     <source path="dev/webfx/lib/circlespacker"/>
     <!--==============================< webfx-platform-boot >===============================-->
     <source path="dev/webfx/platform/boot"/>
