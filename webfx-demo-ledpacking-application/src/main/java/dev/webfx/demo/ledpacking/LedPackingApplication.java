@@ -3,6 +3,8 @@ package dev.webfx.demo.ledpacking;
 import dev.webfx.extras.led.Led;
 import dev.webfx.lib.circlepacking.CirclePackingPane;
 import javafx.application.Application;
+import javafx.beans.property.BooleanProperty;
+import javafx.beans.property.SimpleBooleanProperty;
 import javafx.geometry.Orientation;
 import javafx.scene.Node;
 import javafx.scene.Scene;
@@ -19,6 +21,8 @@ import java.util.stream.IntStream;
  */
 public class LedPackingApplication extends Application {
 
+    private final BooleanProperty highlightedProperty = new SimpleBooleanProperty();
+
     @Override
     public void start(Stage primaryStage) {
         SplitPane verticalSplitPane;
@@ -31,13 +35,20 @@ public class LedPackingApplication extends Application {
         primaryStage.show();
     }
 
-    CirclePackingPane createCirclesPackerPane(int count, Color color) {
+    private CirclePackingPane createCirclesPackerPane(int count, Color color) {
         CirclePackingPane circlePackingPane = new CirclePackingPane(createCircles(count, color));
         circlePackingPane.setBackground(new Background(new BackgroundFill(Color.BLACK, null, null)));
         return circlePackingPane;
     }
 
-    private static Node[] createCircles(int count, Color color) {
-        return IntStream.range(0, count).mapToObj(i -> Led.create(color.brighter().brighter(), null, null)).toArray(Node[]::new);
+    private Node[] createCircles(int count, Color color) {
+        return IntStream.range(0, count).mapToObj(i -> createLed(color.brighter().brighter())).toArray(Node[]::new);
+    }
+
+    private Led createLed(Color ledColor) {
+        Led led = Led.create(ledColor);
+        led.highlightedProperty().bind(highlightedProperty);
+        led.setOnAction(e -> highlightedProperty.set(!highlightedProperty.get()));
+        return led;
     }
 }
