@@ -36,6 +36,7 @@
         <module>webfx-demo-ledpacking-application</module>
         <module>webfx-demo-ledpacking-application-gluon</module>
         <module>webfx-demo-ledpacking-application-gwt</module>
+        <module>webfx-demo-ledpacking-application-j2cl</module>
         <module>webfx-demo-ledpacking-application-openjfx</module>
     </modules>
 

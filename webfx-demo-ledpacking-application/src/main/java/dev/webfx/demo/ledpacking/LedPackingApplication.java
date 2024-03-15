@@ -10,7 +10,6 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.SplitPane;
 import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundFill;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
@@ -38,7 +37,7 @@ public class LedPackingApplication extends Application {
 
     private CirclePackingPane createLedPackingPane(int count, Color ledColor) {
         CirclePackingPane ledPackingPane = new CirclePackingPane(createLeds(count, ledColor));
-        ledPackingPane.setBackground(new Background(new BackgroundFill(Color.BLACK, null, null)));
+        ledPackingPane.setBackground(Background.fill(Color.BLACK));
         return ledPackingPane;
     }
 
